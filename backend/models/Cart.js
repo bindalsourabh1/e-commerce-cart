@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const cartSchema = new mongoose.Schema({
   products: [{ productId: String, quantity: Number }],
@@ -6,4 +6,4 @@ const cartSchema = new mongoose.Schema({
   discount: Number,
 });
 
-module.exports = mongoose.model('Cart', cartSchema);
+module.exports = mongoose.model("Cart", cartSchema);

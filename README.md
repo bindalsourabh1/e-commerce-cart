@@ -7,6 +7,11 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/your-username/e-commerce-cart.git
 ```
+Install required dependencies:
+```bash
+npm install
+```
+
 ## Set up the backend
 
 1. Navigate to the backend directory:
@@ -14,19 +19,14 @@ git clone https://github.com/your-username/e-commerce-cart.git
 cd backend
 ```
 
-2. Install required dependencies:
-```bash
-npm install
-```
-
-3. Create a `.env` file in the backend directory and add your MongoDB URI:
+2. Create a `.env` file in the backend directory and add your MongoDB URI:
 ```env
 MONGODB_URI=your-mongodb-uri-here
 ```
 
-4. Start the backend server:
+3. Start the backend server:
 ```bash
-npm start
+node server.js
 ```
 
 The backend will be running on `http://localhost:5000`.

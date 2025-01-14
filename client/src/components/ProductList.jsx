@@ -21,7 +21,7 @@ const ProductList = ({ onProductAdded }) => {
     })
       .then(() => {
         alert("Product added to cart!");
-        onProductAdded(); 
+        onProductAdded();
       })
       .catch((err) => {
         console.error("Error adding to cart:", err);

@@ -5,7 +5,7 @@ const Cart = ({ cart, fetchCart }) => {
     axios.post('http://localhost:5000/cart/remove', { productId })
       .then(() => {
         alert("Product removed from cart!");
-        fetchCart(); 
+        fetchCart();
       })
       .catch((err) => {
         console.error("Error removing from cart:", err);
@@ -18,10 +18,10 @@ const Cart = ({ cart, fetchCart }) => {
       {cart ? (
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
           <div className="mb-6">
-            <p className="text-lg font-medium">Total Price: 
+            <p className="text-lg font-medium">Total Price:
               <span className="font-bold text-blue-600"> ₹{cart.totalPrice}</span>
             </p>
-            <p className="text-lg font-medium">Discount: 
+            <p className="text-lg font-medium">Discount:
               <span className="font-bold text-green-600"> ₹{cart.discount}</span>
             </p>
           </div>
