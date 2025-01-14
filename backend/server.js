@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const cartRoutes = require('./routes/cartRoutes'); // Correct path to the routes file
+const cartRoutes = require('./routes/cartRoutes'); 
 
-dotenv.config(); // Load environment variables
+dotenv.config(); 
 
 const app = express();
 app.use(cors());

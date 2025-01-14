@@ -5,7 +5,7 @@ const Cart = ({ cart, fetchCart }) => {
     axios.post('http://localhost:5000/cart/remove', { productId })
       .then(() => {
         alert("Product removed from cart!");
-        fetchCart(); // Refresh the cart
+        fetchCart(); 
       })
       .catch((err) => {
         console.error("Error removing from cart:", err);

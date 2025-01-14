@@ -1,10 +1,9 @@
-// backend/routes/cartRoutes.js
 const express = require('express');
 const Cart = require('../models/Cart');
 const Product = require('../models/Product');
 const router = express.Router();
 
-// Add product to cart
+// Adding product to cart
 router.post('/cart/add', async (req, res) => {
     const { productId, quantity } = req.body;
     const product = await Product.findById(productId);
@@ -39,13 +38,11 @@ router.post('/cart/remove', async (req, res) => {
     res.json(cart);
 });
 
-// View cart
 router.get('/cart', async (req, res) => {
     const cart = await Cart.findOne();
     res.json(cart);
 });
 
-// Fetch all products
 router.get('/products', async (req, res) => {
     const products = await Product.find();
     res.json(products);

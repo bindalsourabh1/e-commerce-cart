@@ -5,7 +5,7 @@ dotenv.config();
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
-// Define Product Schema and Model
+
 const productSchema = new mongoose.Schema({
   name: String,
   price: Number,
@@ -32,7 +32,7 @@ mongoose
   })
   .then(() => {
     console.log('Data seeded successfully');
-    mongoose.connection.close(); // Close the connection after inserting data
+    mongoose.connection.close(); 
   })
   .catch((err) => {
     console.error('Error seeding data:', err);

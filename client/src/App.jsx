@@ -6,7 +6,6 @@ import axios from 'axios';
 const App = () => {
   const [cart, setCart] = useState(null);
 
-  // Fetch cart data
   const fetchCart = () => {
     axios
       .get('http://localhost:5000/cart')
@@ -18,7 +17,7 @@ const App = () => {
       });
   };
 
-  // Fetch cart data on initial load
+
   useEffect(() => {
     fetchCart();
   }, []);
